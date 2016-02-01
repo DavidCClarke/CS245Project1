@@ -1,23 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/******************************************************************************
+ * file: HangmanGUI.java
+ * authors: David Clarke and Benjamin Chin
+ * class: CS 245 - Programming Graphical User Interfaces
+ * 
+ * assignment: Quater   Project 1.0
+ * date last modified: 2/1/16
+ * 
+ * purpose: A game of Hangman
+ * 
+ ******************************************************************************/
 package hangman;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
+import java.util.Arrays;
+import java.util.Date;
+import javax.swing.Timer;
 
-/**
- *
- * @author dcclarke
- */
 public class HangmanGUI extends javax.swing.JFrame {
+    Random randomNum = new Random();
+    String[] wordList = {"abstract","cemetary","nurse","pharmacy","climbing"};
+    int wordNum;
+    int points;
+    int tries;
+    char[] targetWord;
+    char[] displayWord;
+    int guesses;
+    boolean correct;
 
     /**
      * Creates new form HangmanGUI
      */
     public HangmanGUI() {
         initComponents();
+        
     }
 
     /**
@@ -29,26 +45,13 @@ public class HangmanGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonN = new javax.swing.JButton();
-        jButtonO = new javax.swing.JButton();
-        jButtonP = new javax.swing.JButton();
-        jButtonQ = new javax.swing.JButton();
-        jButtonR = new javax.swing.JButton();
-        jButtonS = new javax.swing.JButton();
-        jButtonT = new javax.swing.JButton();
-        jButtonU = new javax.swing.JButton();
-        jButtonV = new javax.swing.JButton();
-        jButtonW = new javax.swing.JButton();
-        jButtonX = new javax.swing.JButton();
-        jButtonY = new javax.swing.JButton();
-        jButtonZ = new javax.swing.JButton();
-        jButtonJ = new javax.swing.JButton();
-        jButtonK = new javax.swing.JButton();
-        jButtonL = new javax.swing.JButton();
-        jButtonM = new javax.swing.JButton();
-        jButtonA = new javax.swing.JButton();
-        jButtonB = new javax.swing.JButton();
-        jButtonC = new javax.swing.JButton();
+        jPanelCards = new javax.swing.JPanel();
+        jPanelMainMenu = new javax.swing.JPanel();
+        jButtonPlay = new javax.swing.JButton();
+        jButtonHighScores = new javax.swing.JButton();
+        jButtonCredits = new javax.swing.JButton();
+        jLabelSymbol = new javax.swing.JLabel();
+        jPanelHangman = new javax.swing.JPanel();
         jButtonD = new javax.swing.JButton();
         jButtonE = new javax.swing.JButton();
         jButtonF = new javax.swing.JButton();
@@ -58,46 +61,311 @@ public class HangmanGUI extends javax.swing.JFrame {
         jButtonSkip = new javax.swing.JButton();
         jLabelTitle = new javax.swing.JLabel();
         Clock = new javax.swing.JTextField();
+        jButtonV = new javax.swing.JButton();
+        jButtonW = new javax.swing.JButton();
+        jButtonX = new javax.swing.JButton();
+        jLabelDisplayWord = new javax.swing.JLabel();
+        jButtonY = new javax.swing.JButton();
+        jButtonZ = new javax.swing.JButton();
+        jButtonJ = new javax.swing.JButton();
+        jButtonK = new javax.swing.JButton();
+        jButtonL = new javax.swing.JButton();
+        jButtonM = new javax.swing.JButton();
+        jButtonA = new javax.swing.JButton();
+        jButtonN = new javax.swing.JButton();
+        jButtonO = new javax.swing.JButton();
+        jButtonP = new javax.swing.JButton();
+        jButtonQ = new javax.swing.JButton();
+        jButtonR = new javax.swing.JButton();
+        jButtonS = new javax.swing.JButton();
+        jButtonT = new javax.swing.JButton();
+        jButtonU = new javax.swing.JButton();
+        jButtonB = new javax.swing.JButton();
+        jButtonC = new javax.swing.JButton();
+        jTextAreaPicture = new javax.swing.JTextArea();
+        jPanelHighScores = new javax.swing.JPanel();
+        jButtonHighScoresBack = new javax.swing.JButton();
+        jLabelHighScoresTitle = new javax.swing.JLabel();
+        jLabelHighScores1 = new javax.swing.JLabel();
+        jLabelHighScores2 = new javax.swing.JLabel();
+        jLabelHighScores3 = new javax.swing.JLabel();
+        jLabelHighScores4 = new javax.swing.JLabel();
+        jLabelHighScores5 = new javax.swing.JLabel();
+        jPanelCredits = new javax.swing.JPanel();
+        jLabelBenjamin = new javax.swing.JLabel();
+        jLabelCreditsTitle = new javax.swing.JLabel();
+        jButtonCreditsBack = new javax.swing.JButton();
+        jLabelDavid = new javax.swing.JLabel();
+        jPanelEnd = new javax.swing.JPanel();
+        jLabelEndTitle = new javax.swing.JLabel();
+        jLabelEndScore = new javax.swing.JLabel();
+        jButtonEnd = new javax.swing.JButton();
+        jLabelEndStatus = new javax.swing.JLabel();
+        jPanelStartScreen = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
-        jButtonN.setText("N");
+        jPanelCards.setPreferredSize(new java.awt.Dimension(600, 400));
+        jPanelCards.setLayout(new java.awt.CardLayout());
 
-        jButtonO.setText("O");
+        jPanelMainMenu.setPreferredSize(new java.awt.Dimension(600, 380));
 
-        jButtonP.setText("P");
+        jButtonPlay.setText("Play");
+        jButtonPlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPlayActionPerformed(evt);
+            }
+        });
 
-        jButtonQ.setText("Q");
+        jButtonHighScores.setText("Highscores");
+        jButtonHighScores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHighScoresActionPerformed(evt);
+            }
+        });
 
-        jButtonR.setText("R");
+        jButtonCredits.setText("Credits");
+        jButtonCredits.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreditsActionPerformed(evt);
+            }
+        });
 
-        jButtonS.setText("S");
+        jLabelSymbol.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabelSymbol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hangman/Symbol.png"))); // NOI18N
 
-        jButtonT.setText("T");
+        javax.swing.GroupLayout jPanelMainMenuLayout = new javax.swing.GroupLayout(jPanelMainMenu);
+        jPanelMainMenu.setLayout(jPanelMainMenuLayout);
+        jPanelMainMenuLayout.setHorizontalGroup(
+            jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMainMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelSymbol)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 454, Short.MAX_VALUE)
+                .addGroup(jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonHighScores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonPlay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonCredits, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelMainMenuLayout.setVerticalGroup(
+            jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMainMenuLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMainMenuLayout.createSequentialGroup()
+                        .addComponent(jButtonPlay)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonHighScores))
+                    .addComponent(jLabelSymbol))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonCredits)
+                .addContainerGap(305, Short.MAX_VALUE))
+        );
 
-        jButtonU.setText("U");
+        jPanelCards.add(jPanelMainMenu, "card2");
+
+        jPanelHangman.setPreferredSize(new java.awt.Dimension(600, 400));
+
+        jButtonD.setText("D");
+        jButtonD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDActionPerformed(evt);
+            }
+        });
+
+        jButtonE.setText("E");
+        jButtonE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEActionPerformed(evt);
+            }
+        });
+
+        jButtonF.setText("F");
+        jButtonF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFActionPerformed(evt);
+            }
+        });
+
+        jButtonG.setText("G");
+        jButtonG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGActionPerformed(evt);
+            }
+        });
+
+        jButtonH.setText("H");
+        jButtonH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHActionPerformed(evt);
+            }
+        });
+
+        jButtonI.setText("I");
+        jButtonI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIActionPerformed(evt);
+            }
+        });
+
+        jButtonSkip.setText("Skip");
+        jButtonSkip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSkipActionPerformed(evt);
+            }
+        });
+
+        jLabelTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabelTitle.setText("Hangman");
+
+        Clock.setEditable(false);
+        Clock.setText("Mon Feb 01 03:40:13 ");
+        Clock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClockActionPerformed(evt);
+            }
+        });
 
         jButtonV.setText("V");
+        jButtonV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVActionPerformed(evt);
+            }
+        });
 
         jButtonW.setText("W");
+        jButtonW.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonWActionPerformed(evt);
+            }
+        });
 
         jButtonX.setText("X");
+        jButtonX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonXActionPerformed(evt);
+            }
+        });
+
+        jLabelDisplayWord.setText("WORD");
 
         jButtonY.setText("Y");
+        jButtonY.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonYActionPerformed(evt);
+            }
+        });
 
         jButtonZ.setText("Z");
+        jButtonZ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonZActionPerformed(evt);
+            }
+        });
 
         jButtonJ.setText("J");
+        jButtonJ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJActionPerformed(evt);
+            }
+        });
 
         jButtonK.setText("K");
+        jButtonK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKActionPerformed(evt);
+            }
+        });
 
         jButtonL.setText("L");
+        jButtonL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLActionPerformed(evt);
+            }
+        });
 
         jButtonM.setText("M");
+        jButtonM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMActionPerformed(evt);
+            }
+        });
 
         jButtonA.setText("A");
+        jButtonA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAActionPerformed(evt);
+            }
+        });
+
+        jButtonN.setText("N");
+        jButtonN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNActionPerformed(evt);
+            }
+        });
+
+        jButtonO.setText("O");
+        jButtonO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOActionPerformed(evt);
+            }
+        });
+
+        jButtonP.setText("P");
+        jButtonP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPActionPerformed(evt);
+            }
+        });
+
+        jButtonQ.setText("Q");
+        jButtonQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonQActionPerformed(evt);
+            }
+        });
+
+        jButtonR.setText("R");
+        jButtonR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRActionPerformed(evt);
+            }
+        });
+
+        jButtonS.setText("S");
+        jButtonS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSActionPerformed(evt);
+            }
+        });
+
+        jButtonT.setText("T");
+        jButtonT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTActionPerformed(evt);
+            }
+        });
+
+        jButtonU.setText("U");
+        jButtonU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUActionPerformed(evt);
+            }
+        });
 
         jButtonB.setText("B");
         jButtonB.addActionListener(new java.awt.event.ActionListener() {
@@ -107,39 +375,24 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jButtonC.setText("C");
-
-        jButtonD.setText("D");
-
-        jButtonE.setText("E");
-
-        jButtonF.setText("F");
-
-        jButtonG.setText("G");
-
-        jButtonH.setText("H");
-
-        jButtonI.setText("I");
-
-        jButtonSkip.setText("Skip");
-
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabelTitle.setText("Hangman");
-
-        Clock.addActionListener(new java.awt.event.ActionListener() {
+        jButtonC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ClockActionPerformed(evt);
+                jButtonCActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jTextAreaPicture.setEditable(false);
+        jTextAreaPicture.setColumns(20);
+        jTextAreaPicture.setRows(5);
+
+        javax.swing.GroupLayout jPanelHangmanLayout = new javax.swing.GroupLayout(jPanelHangman);
+        jPanelHangman.setLayout(jPanelHangmanLayout);
+        jPanelHangmanLayout.setHorizontalGroup(
+            jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHangmanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelHangmanLayout.createSequentialGroup()
                         .addComponent(jButtonN)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonO)
@@ -165,19 +418,26 @@ public class HangmanGUI extends javax.swing.JFrame {
                         .addComponent(jButtonY)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonZ))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonA)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonC)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonD)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanelHangmanLayout.createSequentialGroup()
+                        .addComponent(jLabelTitle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonSkip, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Clock, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelHangmanLayout.createSequentialGroup()
+                        .addComponent(jButtonA)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonB)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonD)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextAreaPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelHangmanLayout.createSequentialGroup()
                                 .addComponent(jButtonF)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonG)
@@ -188,33 +448,30 @@ public class HangmanGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonJ)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonK))
-                            .addComponent(jLabelTitle))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Clock)
-                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButtonK)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonL)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonM)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButtonSkip)))))
-                .addContainerGap())
+                                .addComponent(jButtonM))
+                            .addComponent(jLabelDisplayWord, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanelHangmanLayout.setVerticalGroup(
+            jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHangmanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelTitle)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(jPanelHangmanLayout.createSequentialGroup()
                         .addComponent(Clock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonSkip)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 277, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addComponent(jTextAreaPicture, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelDisplayWord)
+                .addGap(18, 18, 18)
+                .addGroup(jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonM)
                     .addComponent(jButtonL)
                     .addComponent(jButtonK)
@@ -229,7 +486,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                     .addComponent(jButtonB)
                     .addComponent(jButtonA))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanelHangmanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonZ)
                     .addComponent(jButtonY)
                     .addComponent(jButtonX)
@@ -243,20 +500,604 @@ public class HangmanGUI extends javax.swing.JFrame {
                     .addComponent(jButtonP)
                     .addComponent(jButtonO)
                     .addComponent(jButtonN))
-                .addContainerGap())
+                .addGap(55, 55, 55))
+        );
+
+        jPanelCards.add(jPanelHangman, "card4");
+
+        jPanelHighScores.setPreferredSize(new java.awt.Dimension(600, 380));
+
+        jButtonHighScoresBack.setText("Back");
+        jButtonHighScoresBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHighScoresBackActionPerformed(evt);
+            }
+        });
+
+        jLabelHighScoresTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabelHighScoresTitle.setText("Highscores");
+
+        jLabelHighScores1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelHighScores1.setText("ABC.....00000");
+
+        jLabelHighScores2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelHighScores2.setText("ABC.....00000");
+
+        jLabelHighScores3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelHighScores3.setText("ABC.....00000");
+
+        jLabelHighScores4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelHighScores4.setText("ABC.....00000");
+
+        jLabelHighScores5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelHighScores5.setText("ABC.....00000");
+
+        javax.swing.GroupLayout jPanelHighScoresLayout = new javax.swing.GroupLayout(jPanelHighScores);
+        jPanelHighScores.setLayout(jPanelHighScoresLayout);
+        jPanelHighScoresLayout.setHorizontalGroup(
+            jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHighScoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonHighScoresBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addGroup(jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelHighScoresTitle)
+                    .addGroup(jPanelHighScoresLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelHighScores2)
+                            .addComponent(jLabelHighScores1)
+                            .addComponent(jLabelHighScores3)
+                            .addComponent(jLabelHighScores4)
+                            .addComponent(jLabelHighScores5))))
+                .addGap(238, 238, 238))
+        );
+        jPanelHighScoresLayout.setVerticalGroup(
+            jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHighScoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelHighScoresTitle)
+                    .addComponent(jButtonHighScoresBack))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelHighScores1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelHighScores2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelHighScores3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelHighScores4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelHighScores5)
+                .addContainerGap(245, Short.MAX_VALUE))
+        );
+
+        jPanelCards.add(jPanelHighScores, "card5");
+
+        jPanelCredits.setPreferredSize(new java.awt.Dimension(600, 380));
+
+        jLabelBenjamin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelBenjamin.setText("Benjamin  Chin, 008881509");
+
+        jLabelCreditsTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabelCreditsTitle.setText("Credits");
+
+        jButtonCreditsBack.setText("Back");
+        jButtonCreditsBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreditsBackActionPerformed(evt);
+            }
+        });
+
+        jLabelDavid.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelDavid.setText("David Clarke, 007239739");
+
+        javax.swing.GroupLayout jPanelCreditsLayout = new javax.swing.GroupLayout(jPanelCredits);
+        jPanelCredits.setLayout(jPanelCreditsLayout);
+        jPanelCreditsLayout.setHorizontalGroup(
+            jPanelCreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCreditsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonCreditsBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                .addComponent(jLabelCreditsTitle)
+                .addGap(269, 269, 269))
+            .addGroup(jPanelCreditsLayout.createSequentialGroup()
+                .addGap(218, 218, 218)
+                .addGroup(jPanelCreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelBenjamin)
+                    .addComponent(jLabelDavid))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelCreditsLayout.setVerticalGroup(
+            jPanelCreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCreditsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelCreditsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelCreditsTitle)
+                    .addComponent(jButtonCreditsBack))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelDavid)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelBenjamin)
+                .addGap(294, 294, 294))
+        );
+
+        jPanelCards.add(jPanelCredits, "card6");
+
+        jPanelEnd.setPreferredSize(new java.awt.Dimension(600, 380));
+
+        jLabelEndTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabelEndTitle.setText("End");
+
+        jLabelEndScore.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelEndScore.setText("Score: 100");
+
+        jButtonEnd.setText("End");
+        jButtonEnd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEndActionPerformed(evt);
+            }
+        });
+
+        jLabelEndStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelEndStatus.setText("You win");
+
+        javax.swing.GroupLayout jPanelEndLayout = new javax.swing.GroupLayout(jPanelEnd);
+        jPanelEnd.setLayout(jPanelEndLayout);
+        jPanelEndLayout.setHorizontalGroup(
+            jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelEndLayout.createSequentialGroup()
+                .addGroup(jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelEndLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButtonEnd)
+                        .addGap(204, 204, 204)
+                        .addComponent(jLabelEndTitle))
+                    .addGroup(jPanelEndLayout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addGroup(jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelEndLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabelEndStatus))
+                            .addComponent(jLabelEndScore))))
+                .addContainerGap(286, Short.MAX_VALUE))
+        );
+        jPanelEndLayout.setVerticalGroup(
+            jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelEndLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelEndTitle)
+                    .addComponent(jButtonEnd))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelEndScore)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelEndStatus)
+                .addContainerGap(314, Short.MAX_VALUE))
+        );
+
+        jPanelCards.add(jPanelEnd, "card7");
+
+        jPanelStartScreen.setPreferredSize(new java.awt.Dimension(600, 380));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel15.setText("CS 245 Quarter Project");
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel16.setText("By: Team QTSPIM");
+
+        javax.swing.GroupLayout jPanelStartScreenLayout = new javax.swing.GroupLayout(jPanelStartScreen);
+        jPanelStartScreen.setLayout(jPanelStartScreenLayout);
+        jPanelStartScreenLayout.setHorizontalGroup(
+            jPanelStartScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelStartScreenLayout.createSequentialGroup()
+                .addGroup(jPanelStartScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelStartScreenLayout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabel15))
+                    .addGroup(jPanelStartScreenLayout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addComponent(jLabel16)))
+                .addContainerGap(206, Short.MAX_VALUE))
+        );
+        jPanelStartScreenLayout.setVerticalGroup(
+            jPanelStartScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelStartScreenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel16)
+                .addContainerGap(337, Short.MAX_VALUE))
+        );
+
+        jPanelCards.add(jPanelStartScreen, "card1");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanelCards, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanelCards, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
+    
+    //method: checkWord
+    //purpose: checks the word for the character
+    private void checkWord(char guess) {
+        for(int j = 0; j < targetWord.length; j++) {
+            if(guess == targetWord[j]) {
+                displayWord[j] = guess;
+                correct = true;
+            }  
+        }
+        jLabelDisplayWord.setText(Arrays.toString(displayWord).replace(',', ' ').replace('[', ' ').replace(']', ' '));
+        if (correct) {
+                updatePicture();
+            }
+        else {
+            points -= 10;
+            guesses++;
+            updatePicture();
+        }
+        if(Arrays.equals(displayWord, targetWord)) {
+            jLabelEndScore.setText("Points: " + points);
+            jLabelEndStatus.setText("You win");
+            CardLayout card = (CardLayout)jPanelCards.getLayout();
+            card.show(jPanelCards, "card7");
+        }
+        else if(tries == guesses) {
+            jLabelEndScore.setText("Points: " + points);
+            jLabelEndStatus.setText("You lose");
+            CardLayout card = (CardLayout)jPanelCards.getLayout();
+            card.show(jPanelCards, "card7");
+        }
+    }
+    
+    //method: updatePicture
+    //purpose: draws the picture using ASCII characters
+    private void updatePicture() {
+        if(guesses == 0) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            \n"
+                            + "||           \n"
+                            + "||           \n"
+                            + "||\n"
+                            + "============\n");
+        }
+        else if(guesses == 1) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            0\n"
+                            + "||           \n"
+                            + "||           \n"
+                            + "||\n"
+                            + "============\n");
+        }
+        else if(guesses == 2) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            0\n"
+                            + "||           /\n"
+                            + "||           \n"
+                            + "||\n"
+                            + "============\n");
+        }
+        else if(guesses == 3) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            0\n"
+                            + "||           /|\n"
+                            + "||           \n"
+                            + "||\n"
+                            + "============\n");
+        }
+        else if(guesses == 4) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            0\n"
+                            + "||           /|\\\n"
+                            + "||           \n"
+                            + "||\n"
+                            + "============\n");
+        }
+        else if(guesses == 5) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            0\n"
+                            + "||           /|\\\n"
+                            + "||           /\n"
+                            + "||\n"
+                            + "============\n");
+        }
+        else if(guesses == 6) {
+            jTextAreaPicture.setText("==========\n"
+                            + "||            |\n"
+                            + "||            0\n"
+                            + "||           /|\n"
+                            + "||           / \\\n"
+                            + "||\n"
+                            + "============\n");
+        }
+    }
+    
     private void jButtonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBActionPerformed
-        // TODO add your handling code here:
+        correct = false;
+        jButtonB.setEnabled(false);
+        checkWord('b');
     }//GEN-LAST:event_jButtonBActionPerformed
 
     private void ClockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClockActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_ClockActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        
+    }//GEN-LAST:event_formWindowActivated
+
+    private void jButtonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAActionPerformed
+        correct = false;
+        jButtonA.setEnabled(false);
+        checkWord('a');
+    }//GEN-LAST:event_jButtonAActionPerformed
+
+    private void jButtonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCActionPerformed
+        correct = false;
+        jButtonC.setEnabled(false);
+        checkWord('c');
+    }//GEN-LAST:event_jButtonCActionPerformed
+
+    private void jButtonMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMActionPerformed
+        correct = false;
+        jButtonM.setEnabled(false);
+        checkWord('m');
+    }//GEN-LAST:event_jButtonMActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        setLocationRelativeTo(null);
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card1");
+        Timer start = new Timer(3000, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    CardLayout card = (CardLayout)jPanelCards.getLayout();
+                    card.show(jPanelCards, "card2");
+                }
+            });
+        start.setRepeats(false);
+        start.start();
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jButtonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDActionPerformed
+        correct = false;
+        jButtonD.setEnabled(false);
+        checkWord('d');
+    }//GEN-LAST:event_jButtonDActionPerformed
+
+    private void jButtonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEActionPerformed
+        correct = false;
+        jButtonE.setEnabled(false);
+        checkWord('e');
+    }//GEN-LAST:event_jButtonEActionPerformed
+
+    private void jButtonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFActionPerformed
+        correct = false;
+        jButtonF.setEnabled(false);
+        checkWord('f');
+    }//GEN-LAST:event_jButtonFActionPerformed
+
+    private void jButtonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGActionPerformed
+        correct = false;
+        jButtonG.setEnabled(false);
+        checkWord('g');
+    }//GEN-LAST:event_jButtonGActionPerformed
+
+    private void jButtonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHActionPerformed
+        correct = false;
+        jButtonH.setEnabled(false);
+        checkWord('h');
+    }//GEN-LAST:event_jButtonHActionPerformed
+
+    private void jButtonIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIActionPerformed
+        correct = false;
+        jButtonI.setEnabled(false);
+        checkWord('i');
+    }//GEN-LAST:event_jButtonIActionPerformed
+
+    private void jButtonJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJActionPerformed
+        correct = false;
+        jButtonJ.setEnabled(false);
+        checkWord('j');
+    }//GEN-LAST:event_jButtonJActionPerformed
+
+    private void jButtonKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKActionPerformed
+        correct = false;
+        jButtonK.setEnabled(false);
+        checkWord('k');
+    }//GEN-LAST:event_jButtonKActionPerformed
+
+    private void jButtonLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLActionPerformed
+        correct = false;
+        jButtonL.setEnabled(false);
+        checkWord('l');
+    }//GEN-LAST:event_jButtonLActionPerformed
+
+    private void jButtonNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNActionPerformed
+        correct = false;
+        jButtonN.setEnabled(false);
+        checkWord('n');
+    }//GEN-LAST:event_jButtonNActionPerformed
+
+    private void jButtonOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOActionPerformed
+        correct = false;
+        jButtonO.setEnabled(false);
+        checkWord('o');
+    }//GEN-LAST:event_jButtonOActionPerformed
+
+    private void jButtonPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPActionPerformed
+        correct = false;
+        jButtonP.setEnabled(false);
+        checkWord('p');
+    }//GEN-LAST:event_jButtonPActionPerformed
+
+    private void jButtonQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQActionPerformed
+        correct = false;
+        jButtonQ.setEnabled(false);
+        checkWord('q');
+    }//GEN-LAST:event_jButtonQActionPerformed
+
+    private void jButtonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRActionPerformed
+        correct = false;
+        jButtonR.setEnabled(false);
+        checkWord('r');
+    }//GEN-LAST:event_jButtonRActionPerformed
+
+    private void jButtonSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSActionPerformed
+        correct = false;
+        jButtonS.setEnabled(false);
+        checkWord('s');
+    }//GEN-LAST:event_jButtonSActionPerformed
+
+    private void jButtonTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTActionPerformed
+        correct = false;
+        jButtonT.setEnabled(false);
+        checkWord('t');
+    }//GEN-LAST:event_jButtonTActionPerformed
+
+    private void jButtonUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUActionPerformed
+        correct = false;
+        jButtonU.setEnabled(false);
+        checkWord('u');
+    }//GEN-LAST:event_jButtonUActionPerformed
+
+    private void jButtonVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVActionPerformed
+        correct = false;
+        jButtonV.setEnabled(false);
+        checkWord('v');
+    }//GEN-LAST:event_jButtonVActionPerformed
+
+    private void jButtonWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWActionPerformed
+        correct = false;
+        jButtonW.setEnabled(false);
+        checkWord('w');
+    }//GEN-LAST:event_jButtonWActionPerformed
+
+    private void jButtonXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonXActionPerformed
+        correct = false;
+        jButtonX.setEnabled(false);
+        checkWord('x');
+    }//GEN-LAST:event_jButtonXActionPerformed
+
+    private void jButtonYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonYActionPerformed
+        correct = false;
+        jButtonY.setEnabled(false);
+        checkWord('y');
+    }//GEN-LAST:event_jButtonYActionPerformed
+
+    private void jButtonZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonZActionPerformed
+        correct = false;
+        jButtonZ.setEnabled(false);
+        checkWord('z');
+    }//GEN-LAST:event_jButtonZActionPerformed
+
+    private void jButtonSkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSkipActionPerformed
+        points = 0;
+        jLabelEndScore.setText("Points: " + points);
+        jLabelEndStatus.setText("");
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card7"); 
+    }//GEN-LAST:event_jButtonSkipActionPerformed
+    //method: updateClock
+    //purpose: updates the clock to the current date and time
+    private void updateClock() {
+        Clock.setText(new Date().toString().substring(0, 19));
+    }       
+    private void jButtonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlayActionPerformed
+        points = 100;
+        tries = 6;
+        guesses = 0;
+        wordNum = randomNum.nextInt(wordList.length);
+        targetWord = wordList[wordNum].toCharArray();
+        displayWord = new char[targetWord.length];
+        Arrays.fill(displayWord, '_');
+        jLabelDisplayWord.setText(Arrays.toString(displayWord).replace(',', ' ').replace('[', ' ').replace(']', ' '));
+        updatePicture();
+        
+        Timer time = new Timer(500, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    updateClock();
+                }
+            });
+            time.start();
+        
+        jButtonA.setEnabled(true);
+        jButtonB.setEnabled(true);
+        jButtonC.setEnabled(true);
+        jButtonD.setEnabled(true);
+        jButtonE.setEnabled(true);
+        jButtonF.setEnabled(true);
+        jButtonG.setEnabled(true);
+        jButtonH.setEnabled(true);
+        jButtonI.setEnabled(true);
+        jButtonJ.setEnabled(true);
+        jButtonK.setEnabled(true);
+        jButtonL.setEnabled(true);
+        jButtonM.setEnabled(true);
+        jButtonN.setEnabled(true);
+        jButtonO.setEnabled(true);
+        jButtonP.setEnabled(true);
+        jButtonQ.setEnabled(true);
+        jButtonR.setEnabled(true);
+        jButtonS.setEnabled(true);
+        jButtonT.setEnabled(true);
+        jButtonU.setEnabled(true);
+        jButtonV.setEnabled(true);
+        jButtonW.setEnabled(true);
+        jButtonX.setEnabled(true);
+        jButtonY.setEnabled(true);
+        jButtonZ.setEnabled(true);
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card4");
+    }//GEN-LAST:event_jButtonPlayActionPerformed
+
+    private void jButtonHighScoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHighScoresActionPerformed
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card5");
+    }//GEN-LAST:event_jButtonHighScoresActionPerformed
+
+    private void jButtonCreditsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreditsActionPerformed
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card6");
+    }//GEN-LAST:event_jButtonCreditsActionPerformed
+
+    private void jButtonCreditsBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreditsBackActionPerformed
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card2");
+    }//GEN-LAST:event_jButtonCreditsBackActionPerformed
+
+    private void jButtonHighScoresBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHighScoresBackActionPerformed
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card2");
+    }//GEN-LAST:event_jButtonHighScoresBackActionPerformed
+
+    private void jButtonEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEndActionPerformed
+        CardLayout card = (CardLayout)jPanelCards.getLayout();
+        card.show(jPanelCards, "card2");
+    }//GEN-LAST:event_jButtonEndActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,8 +1130,10 @@ public class HangmanGUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new HangmanGUI().setVisible(true);
+                
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -298,11 +1141,16 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonA;
     private javax.swing.JButton jButtonB;
     private javax.swing.JButton jButtonC;
+    private javax.swing.JButton jButtonCredits;
+    private javax.swing.JButton jButtonCreditsBack;
     private javax.swing.JButton jButtonD;
     private javax.swing.JButton jButtonE;
+    private javax.swing.JButton jButtonEnd;
     private javax.swing.JButton jButtonF;
     private javax.swing.JButton jButtonG;
     private javax.swing.JButton jButtonH;
+    private javax.swing.JButton jButtonHighScores;
+    private javax.swing.JButton jButtonHighScoresBack;
     private javax.swing.JButton jButtonI;
     private javax.swing.JButton jButtonJ;
     private javax.swing.JButton jButtonK;
@@ -311,6 +1159,7 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonN;
     private javax.swing.JButton jButtonO;
     private javax.swing.JButton jButtonP;
+    private javax.swing.JButton jButtonPlay;
     private javax.swing.JButton jButtonQ;
     private javax.swing.JButton jButtonR;
     private javax.swing.JButton jButtonS;
@@ -322,6 +1171,30 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonX;
     private javax.swing.JButton jButtonY;
     private javax.swing.JButton jButtonZ;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabelBenjamin;
+    private javax.swing.JLabel jLabelCreditsTitle;
+    private javax.swing.JLabel jLabelDavid;
+    private javax.swing.JLabel jLabelDisplayWord;
+    private javax.swing.JLabel jLabelEndScore;
+    private javax.swing.JLabel jLabelEndStatus;
+    private javax.swing.JLabel jLabelEndTitle;
+    private javax.swing.JLabel jLabelHighScores1;
+    private javax.swing.JLabel jLabelHighScores2;
+    private javax.swing.JLabel jLabelHighScores3;
+    private javax.swing.JLabel jLabelHighScores4;
+    private javax.swing.JLabel jLabelHighScores5;
+    private javax.swing.JLabel jLabelHighScoresTitle;
+    private javax.swing.JLabel jLabelSymbol;
     private javax.swing.JLabel jLabelTitle;
+    private javax.swing.JPanel jPanelCards;
+    private javax.swing.JPanel jPanelCredits;
+    private javax.swing.JPanel jPanelEnd;
+    private javax.swing.JPanel jPanelHangman;
+    private javax.swing.JPanel jPanelHighScores;
+    private javax.swing.JPanel jPanelMainMenu;
+    private javax.swing.JPanel jPanelStartScreen;
+    private javax.swing.JTextArea jTextAreaPicture;
     // End of variables declaration//GEN-END:variables
 }
