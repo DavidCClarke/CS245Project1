@@ -3,7 +3,7 @@
  * authors: David Clarke and Benjamin Chin
  * class: CS 245 - Programming Graphical User Interfaces
  * 
- * assignment: Quater   Project 1.0
+ * assignment: Quarter   Project 1.0
  * date last modified: 2/1/16
  * 
  * purpose: A game of Hangman
@@ -104,16 +104,17 @@ public class HangmanGUI extends javax.swing.JFrame {
         jPanelStartScreen = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jPanelColorGame = new javax.swing.JPanel();
+        randomColorText = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
-            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
+            }
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
             }
         });
 
@@ -153,7 +154,7 @@ public class HangmanGUI extends javax.swing.JFrame {
             .addGroup(jPanelMainMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelSymbol)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 454, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
                 .addGroup(jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonHighScores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonPlay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -539,7 +540,7 @@ public class HangmanGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHighScoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonHighScoresBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addGroup(jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelHighScoresTitle)
                     .addGroup(jPanelHighScoresLayout.createSequentialGroup()
@@ -599,7 +600,7 @@ public class HangmanGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCreditsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonCreditsBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
                 .addComponent(jLabelCreditsTitle)
                 .addGap(269, 269, 269))
             .addGroup(jPanelCreditsLayout.createSequentialGroup()
@@ -661,7 +662,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                                 .addGap(10, 10, 10)
                                 .addComponent(jLabelEndStatus))
                             .addComponent(jLabelEndScore))))
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
         jPanelEndLayout.setVerticalGroup(
             jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -699,7 +700,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                     .addGroup(jPanelStartScreenLayout.createSequentialGroup()
                         .addGap(229, 229, 229)
                         .addComponent(jLabel16)))
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
         jPanelStartScreenLayout.setVerticalGroup(
             jPanelStartScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -712,6 +713,29 @@ public class HangmanGUI extends javax.swing.JFrame {
         );
 
         jPanelCards.add(jPanelStartScreen, "card1");
+
+        randomColorText.setText("Color");
+
+        javax.swing.GroupLayout jPanelColorGameLayout = new javax.swing.GroupLayout(jPanelColorGame);
+        jPanelColorGame.setLayout(jPanelColorGameLayout);
+        jPanelColorGameLayout.setHorizontalGroup(
+            jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                .addGap(302, 302, 302)
+                .addComponent(randomColorText)
+                .addContainerGap(325, Short.MAX_VALUE))
+        );
+        jPanelColorGameLayout.setVerticalGroup(
+            jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(randomColorText)
+                .addContainerGap(268, Short.MAX_VALUE))
+        );
+
+        randomColorText.getAccessibleContext().setAccessibleName("randomColorText");
+
+        jPanelCards.add(jPanelColorGame, "card8");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1135,6 +1159,31 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
         
     }
+    
+    //gives a random color
+    private Color randomColor(){
+        switch(randomNum.nextInt(5)){ //random int [0,5)
+            case 0:	return Color.YELLOW;
+            case 1:	return Color.RED;
+            case 2:	return Color.GREEN;	
+            case 3:	return Color.BLUE;
+            case 4:	return Color.MAGENTA;
+        }
+        return null;
+    }
+        
+    private String randomColorName(){
+        switch(randomNum.nextInt(5)){ //random int [0,5)
+            case 0:	return "Yellow";
+            case 1:	return "Red";
+            case 2:	return "Green";
+            case 3:	return "Blue";
+            case 4:	return "Magenta";
+        }
+        return null;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Clock;
@@ -1189,6 +1238,7 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSymbol;
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JPanel jPanelCards;
+    private javax.swing.JPanel jPanelColorGame;
     private javax.swing.JPanel jPanelCredits;
     private javax.swing.JPanel jPanelEnd;
     private javax.swing.JPanel jPanelHangman;
@@ -1196,5 +1246,6 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelMainMenu;
     private javax.swing.JPanel jPanelStartScreen;
     private javax.swing.JTextArea jTextAreaPicture;
+    private javax.swing.JLabel randomColorText;
     // End of variables declaration//GEN-END:variables
 }
