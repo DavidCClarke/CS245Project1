@@ -15,11 +15,13 @@ import java.awt.event.*;
 import java.util.Random;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.Timer;
 
 public class HangmanGUI extends javax.swing.JFrame {
     Random randomNum = new Random();
-    String[] wordList = {"abstract","cemetary","nurse","pharmacy","climbing"};
+    String[] wordList = {"abstract","cemetery","nurse","pharmacy","climbing"};
     int wordNum;
     int points;
     int tries;
@@ -27,6 +29,7 @@ public class HangmanGUI extends javax.swing.JFrame {
     char[] displayWord;
     int guesses;
     boolean correct;
+    ArrayList<Color> colorPool = new ArrayList<>();
 
     /**
      * Creates new form HangmanGUI
@@ -106,6 +109,12 @@ public class HangmanGUI extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPanelColorGame = new javax.swing.JPanel();
         randomColorText = new javax.swing.JLabel();
+        Clock1 = new javax.swing.JTextField();
+        jButtonColor1 = new javax.swing.JButton();
+        jButtonColor2 = new javax.swing.JButton();
+        jButtonColor3 = new javax.swing.JButton();
+        jButtonColor4 = new javax.swing.JButton();
+        jButtonColor5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -233,7 +242,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jLabelTitle.setText("Hangman");
 
         Clock.setEditable(false);
-        Clock.setText("Mon Feb 01 03:40:13 ");
+        Clock.setText(new Date().toString().substring(0, 19));
         Clock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClockActionPerformed(evt);
@@ -662,7 +671,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                                 .addGap(10, 10, 10)
                                 .addComponent(jLabelEndStatus))
                             .addComponent(jLabelEndScore))))
-                .addContainerGap(335, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
         jPanelEndLayout.setVerticalGroup(
             jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -714,27 +723,109 @@ public class HangmanGUI extends javax.swing.JFrame {
 
         jPanelCards.add(jPanelStartScreen, "card1");
 
+        randomColorText.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         randomColorText.setForeground(randomColor());
         randomColorText.setText(randomColorName());
+
+        Clock1.setEditable(false);
+        Clock1.setText(new Date().toString().substring(0, 19));
+        Clock1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Clock1ActionPerformed(evt);
+            }
+        });
+
+        jButtonColor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColor1ActionPerformed(evt);
+            }
+        });
+
+        jButtonColor2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColor2ActionPerformed(evt);
+            }
+        });
+
+        jButtonColor3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColor3ActionPerformed(evt);
+            }
+        });
+
+        jButtonColor4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColor4ActionPerformed(evt);
+            }
+        });
+
+        jButtonColor5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColor5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelColorGameLayout = new javax.swing.GroupLayout(jPanelColorGame);
         jPanelColorGame.setLayout(jPanelColorGameLayout);
         jPanelColorGameLayout.setHorizontalGroup(
             jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelColorGameLayout.createSequentialGroup()
-                .addGap(233, 233, 233)
-                .addComponent(randomColorText)
-                .addContainerGap(338, Short.MAX_VALUE))
+                .addGroup(jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelColorGameLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Clock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(randomColorText)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jButtonColor1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonColor5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
+            .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jButtonColor2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(jButtonColor3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
+                .addComponent(jButtonColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanelColorGameLayout.setVerticalGroup(
             jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelColorGameLayout.createSequentialGroup()
-                .addGap(106, 106, 106)
+                .addContainerGap()
+                .addComponent(Clock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
                 .addComponent(randomColorText)
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addGroup(jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jButtonColor5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonColor3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                                    .addComponent(jButtonColor1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(39, 39, 39)
+                                    .addComponent(jButtonColor2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanelColorGameLayout.createSequentialGroup()
+                                .addGap(112, 112, 112)
+                                .addComponent(jButtonColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         randomColorText.getAccessibleContext().setAccessibleName("randomColorText");
+        jButtonColor1.getAccessibleContext().setAccessibleName("jButtonColor1");
+        jButtonColor2.getAccessibleContext().setAccessibleName("jButtonColor2");
+        jButtonColor3.getAccessibleContext().setAccessibleName("jButtonColor3");
+        jButtonColor4.getAccessibleContext().setAccessibleName("jButtonColor4");
+        jButtonColor5.getAccessibleContext().setAccessibleName("jButtonColor5");
 
         jPanelCards.add(jPanelColorGame, "card8");
 
@@ -1046,10 +1137,15 @@ public class HangmanGUI extends javax.swing.JFrame {
         card.show(jPanelCards, "card7"); 
     }//GEN-LAST:event_jButtonSkipActionPerformed
     //method: updateClock
-    //purpose: updates the clock to the current date and time
+    //purpose: updates Clock to the current date and time
     private void updateClock() {
         Clock.setText(new Date().toString().substring(0, 19));
     }       
+    //method: updateClock1
+    //purpose: updates the Clock1 to the current date and time
+    private void updateClock1() {
+        Clock1.setText(new Date().toString().substring(0, 19));
+    }     
     private void jButtonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlayActionPerformed
         points = 100;
         tries = 6;
@@ -1121,8 +1217,51 @@ public class HangmanGUI extends javax.swing.JFrame {
 
     private void jButtonEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEndActionPerformed
         CardLayout card = (CardLayout)jPanelCards.getLayout();
-        card.show(jPanelCards, "card2");
+        tries = 5;
+        Timer time = new Timer(500, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    updateClock1();
+                }
+            });
+        time.start();
+        colorPool.add(Color.YELLOW);
+        colorPool.add(Color.RED);
+        colorPool.add(Color.GREEN);
+        colorPool.add(Color.BLUE);
+        colorPool.add(Color.MAGENTA);
+        resetButtonColors();
+        jButtonColor1.setEnabled(true);
+        jButtonColor2.setEnabled(true);
+        jButtonColor3.setEnabled(true);
+        jButtonColor4.setEnabled(true);
+        jButtonColor5.setEnabled(true);
+        card.show(jPanelCards, "card8");
     }//GEN-LAST:event_jButtonEndActionPerformed
+
+    private void Clock1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Clock1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Clock1ActionPerformed
+
+    private void jButtonColor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColor2ActionPerformed
+        checkColor(jButtonColor2.getBackground());
+    }//GEN-LAST:event_jButtonColor2ActionPerformed
+
+    private void jButtonColor5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColor5ActionPerformed
+        checkColor(jButtonColor5.getBackground());
+    }//GEN-LAST:event_jButtonColor5ActionPerformed
+
+    private void jButtonColor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColor1ActionPerformed
+        checkColor(jButtonColor1.getBackground());
+    }//GEN-LAST:event_jButtonColor1ActionPerformed
+
+    private void jButtonColor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColor3ActionPerformed
+        checkColor(jButtonColor3.getBackground());
+    }//GEN-LAST:event_jButtonColor3ActionPerformed
+
+    private void jButtonColor4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColor4ActionPerformed
+        checkColor(jButtonColor4.getBackground());
+    }//GEN-LAST:event_jButtonColor4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1184,13 +1323,39 @@ public class HangmanGUI extends javax.swing.JFrame {
         return null;
     }
     
+    private void resetButtonColors(){
+        Collections.shuffle(colorPool);
+        jButtonColor1.setBackground(colorPool.get(0));
+        jButtonColor2.setBackground(colorPool.get(1));
+        jButtonColor3.setBackground(colorPool.get(2));
+        jButtonColor4.setBackground(colorPool.get(3));
+        jButtonColor5.setBackground(colorPool.get(4));
+    }
     
+    private void checkColor(Color buttonColor){
+        tries--;
+        points += (buttonColor.equals(randomColorText.getForeground()))? 100: 0;
+        randomColorText.setForeground(randomColor());
+        randomColorText.setText(randomColorName());
+        resetButtonColors();
+        if(tries == 0){
+            jLabelEndScore.setText("Score: " + points);
+            CardLayout card = (CardLayout)jPanelCards.getLayout();
+            card.show(jPanelCards, "card7");   
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Clock;
+    private javax.swing.JTextField Clock1;
     private javax.swing.JButton jButtonA;
     private javax.swing.JButton jButtonB;
     private javax.swing.JButton jButtonC;
+    private javax.swing.JButton jButtonColor1;
+    private javax.swing.JButton jButtonColor2;
+    private javax.swing.JButton jButtonColor3;
+    private javax.swing.JButton jButtonColor4;
+    private javax.swing.JButton jButtonColor5;
     private javax.swing.JButton jButtonCredits;
     private javax.swing.JButton jButtonCreditsBack;
     private javax.swing.JButton jButtonD;
