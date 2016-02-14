@@ -714,23 +714,24 @@ public class HangmanGUI extends javax.swing.JFrame {
 
         jPanelCards.add(jPanelStartScreen, "card1");
 
-        randomColorText.setText("Color");
+        randomColorText.setForeground(randomColor());
+        randomColorText.setText(randomColorName());
 
         javax.swing.GroupLayout jPanelColorGameLayout = new javax.swing.GroupLayout(jPanelColorGame);
         jPanelColorGame.setLayout(jPanelColorGameLayout);
         jPanelColorGameLayout.setHorizontalGroup(
             jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelColorGameLayout.createSequentialGroup()
-                .addGap(302, 302, 302)
+                .addGap(233, 233, 233)
                 .addComponent(randomColorText)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(338, Short.MAX_VALUE))
         );
         jPanelColorGameLayout.setVerticalGroup(
             jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelColorGameLayout.createSequentialGroup()
-                .addGap(117, 117, 117)
+                .addGap(106, 106, 106)
                 .addComponent(randomColorText)
-                .addContainerGap(268, Short.MAX_VALUE))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
 
         randomColorText.getAccessibleContext().setAccessibleName("randomColorText");
