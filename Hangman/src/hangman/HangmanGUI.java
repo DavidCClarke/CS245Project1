@@ -2782,16 +2782,14 @@ public class HangmanGUI extends javax.swing.JFrame {
             updatePicture();
         }
         if(Arrays.equals(displayWord, targetWord)) {
-            jLabelEndScore.setText("Points: " + points);
-            jLabelEndStatus.setText("You win");
+            startColor();
             CardLayout card = (CardLayout)jPanelCards.getLayout();
-            card.show(jPanelCards, "card7");
+            card.show(jPanelCards, "card8");
         }
         else if(tries == guesses) {
-            jLabelEndScore.setText("Points: " + points);
-            jLabelEndStatus.setText("You lose");
+            startColor();
             CardLayout card = (CardLayout)jPanelCards.getLayout();
-            card.show(jPanelCards, "card7");
+            card.show(jPanelCards, "card8");
         }
     }
     
@@ -3045,10 +3043,9 @@ public class HangmanGUI extends javax.swing.JFrame {
 
     private void jButtonSkipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSkipActionPerformed
         points = 0;
-        jLabelEndScore.setText("Points: " + points);
-        jLabelEndStatus.setText("");
+        startColor();
         CardLayout card = (CardLayout)jPanelCards.getLayout();
-        card.show(jPanelCards, "card7"); 
+        card.show(jPanelCards, "card8"); 
     }//GEN-LAST:event_jButtonSkipActionPerformed
     //method: updateClock
     //purpose: updates Clock to the current date and time
@@ -4052,6 +4049,28 @@ public class HangmanGUI extends javax.swing.JFrame {
             }
             CardLayout card = (CardLayout)jPanelCards.getLayout();
             card.show(jPanelCards, "card9");
+    }
+    
+    private void startColor(){
+        tries = 5;
+        Timer time = new Timer(500, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    updateClock1();
+                }
+            });
+        time.start();
+        colorPool.add(Color.YELLOW);
+        colorPool.add(Color.RED);
+        colorPool.add(Color.GREEN);
+        colorPool.add(Color.BLUE);
+        colorPool.add(Color.MAGENTA);
+        resetButtonColors();
+        jButtonColor1.setEnabled(true);
+        jButtonColor2.setEnabled(true);
+        jButtonColor3.setEnabled(true);
+        jButtonColor4.setEnabled(true);
+        jButtonColor5.setEnabled(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
