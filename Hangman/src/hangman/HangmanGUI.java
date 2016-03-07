@@ -22,8 +22,12 @@ import javax.swing.Timer;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.IOException;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.InputMap;
 import javax.swing.InputVerifier;
 import javax.swing.JOptionPane;
+import javax.swing.KeyStroke;
 
 public class HangmanGUI extends javax.swing.JFrame {
     Random randomNum = new Random();
@@ -104,9 +108,35 @@ public class HangmanGUI extends javax.swing.JFrame {
      */
     public HangmanGUI() {
         initComponents();
-        
+        keyBinds();
+        //jPanelCards.getInputMap().put(KeyStroke.getKeyStroke("F1"), creditsPopUp);
     }
+    
+    private void keyBinds() {
+        
+        jPanelCards.getInputMap().put(KeyStroke.getKeyStroke("F1"), "credits");
+        Action credits = new AbstractAction(){
 
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                Component frame = null;
+                JOptionPane.showMessageDialog(frame,
+                "David Clarke, 007239739\nBenjamin  Chin, 008881509\nCS 245 Quarter Project\nWinter 2016",
+                "Credits",
+                JOptionPane.PLAIN_MESSAGE);
+            } 
+        };
+        jPanelCards.getActionMap().put("credits", credits);
+        jPanelCards.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "quit");
+        Action quit = new AbstractAction(){
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                System.exit(0);
+            } 
+        };
+        jPanelCards.getActionMap().put("quit", quit);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -116,7 +146,6 @@ public class HangmanGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jProgressBar1 = new javax.swing.JProgressBar();
         jPanelCards = new javax.swing.JPanel();
         jPanelMainMenu = new javax.swing.JPanel();
         jButtonPlay = new javax.swing.JButton();
@@ -293,8 +322,18 @@ public class HangmanGUI extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
 
         jPanelCards.setPreferredSize(new java.awt.Dimension(600, 400));
+        jPanelCards.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPanelCardsKeyPressed(evt);
+            }
+        });
         jPanelCards.setLayout(new java.awt.CardLayout());
 
         jPanelMainMenu.setPreferredSize(new java.awt.Dimension(600, 380));
@@ -716,7 +755,7 @@ public class HangmanGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHighScoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonHighScoresBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                 .addGroup(jPanelHighScoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelHighScoresTitle)
                     .addGroup(jPanelHighScoresLayout.createSequentialGroup()
@@ -776,7 +815,7 @@ public class HangmanGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCreditsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButtonCreditsBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
                 .addComponent(jLabelCreditsTitle)
                 .addGap(269, 269, 269))
             .addGroup(jPanelCreditsLayout.createSequentialGroup()
@@ -822,7 +861,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                     .addGroup(jPanelStartScreenLayout.createSequentialGroup()
                         .addGap(229, 229, 229)
                         .addComponent(jLabel16)))
-                .addContainerGap(236, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
         );
         jPanelStartScreenLayout.setVerticalGroup(
             jPanelStartScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -904,7 +943,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                 .addComponent(jButtonColor3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78)
                 .addComponent(jButtonColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanelColorGameLayout.setVerticalGroup(
             jPanelColorGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -929,7 +968,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                             .addGroup(jPanelColorGameLayout.createSequentialGroup()
                                 .addGap(112, 112, 112)
                                 .addComponent(jButtonColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         randomColorText.getAccessibleContext().setAccessibleName("randomColorText");
@@ -978,7 +1017,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                     .addGroup(jPanelColorGameEndLayout.createSequentialGroup()
                         .addGap(187, 187, 187)
                         .addComponent(jTextFieldHighscoreName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
         jPanelColorGameEndLayout.setVerticalGroup(
             jPanelColorGameEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -991,7 +1030,7 @@ public class HangmanGUI extends javax.swing.JFrame {
                 .addComponent(jLabelTotalScore)
                 .addGap(62, 62, 62)
                 .addComponent(jTextFieldHighscoreName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
 
         jLabelColorGameEndText.getAccessibleContext().setAccessibleName("jLabelColorGameEndText");
@@ -3757,6 +3796,14 @@ public class HangmanGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Clock2ActionPerformed
 
+    private void jPanelCardsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanelCardsKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelCardsKeyPressed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -4065,7 +4112,6 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelMainMenu;
     private javax.swing.JPanel jPanelStartScreen;
     private javax.swing.JPanel jPanelSudoku;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JButton jQuitButton;
     private javax.swing.JTextArea jTextAreaPicture;
     private javax.swing.JTextField jTextField1;
