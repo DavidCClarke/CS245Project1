@@ -1636,6 +1636,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="8"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1653,6 +1654,7 @@
             <Component class="javax.swing.JTextField" name="jTextField2">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1671,6 +1673,7 @@
             <Component class="javax.swing.JTextField" name="jTextField3">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1691,6 +1694,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="4"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1708,6 +1712,7 @@
             <Component class="javax.swing.JTextField" name="jTextField5">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1728,6 +1733,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="6"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1745,6 +1751,7 @@
             <Component class="javax.swing.JTextField" name="jTextField7">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1763,6 +1770,7 @@
             <Component class="javax.swing.JTextField" name="jTextField8">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1783,6 +1791,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="7"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1800,6 +1809,7 @@
             <Component class="javax.swing.JTextField" name="jTextField10">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1818,6 +1828,7 @@
             <Component class="javax.swing.JTextField" name="jTextField11">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1836,6 +1847,7 @@
             <Component class="javax.swing.JTextField" name="jTextField12">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1854,6 +1866,7 @@
             <Component class="javax.swing.JTextField" name="jTextField13">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1872,6 +1885,7 @@
             <Component class="javax.swing.JTextField" name="jTextField14">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1890,6 +1904,7 @@
             <Component class="javax.swing.JTextField" name="jTextField15">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1910,6 +1925,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="4"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1927,6 +1943,7 @@
             <Component class="javax.swing.JTextField" name="jTextField17">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1945,6 +1962,7 @@
             <Component class="javax.swing.JTextField" name="jTextField18">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1963,6 +1981,7 @@
             <Component class="javax.swing.JTextField" name="jTextField19">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -1983,6 +2002,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2000,6 +2020,7 @@
             <Component class="javax.swing.JTextField" name="jTextField21">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2018,6 +2039,7 @@
             <Component class="javax.swing.JTextField" name="jTextField22">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2036,6 +2058,7 @@
             <Component class="javax.swing.JTextField" name="jTextField23">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2054,6 +2077,7 @@
             <Component class="javax.swing.JTextField" name="jTextField24">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2074,6 +2098,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="6"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2093,6 +2118,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="5"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2110,6 +2136,7 @@
             <Component class="javax.swing.JTextField" name="jTextField27">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2130,6 +2157,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="5"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2147,6 +2175,7 @@
             <Component class="javax.swing.JTextField" name="jTextField29">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2167,6 +2196,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="9"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2184,6 +2214,7 @@
             <Component class="javax.swing.JTextField" name="jTextField31">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2204,6 +2235,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="3"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2221,6 +2253,7 @@
             <Component class="javax.swing.JTextField" name="jTextField33">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2241,6 +2274,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="7"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2260,6 +2294,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="8"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2277,6 +2312,7 @@
             <Component class="javax.swing.JTextField" name="jTextField36">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2295,6 +2331,7 @@
             <Component class="javax.swing.JTextField" name="jTextField37">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2313,6 +2350,7 @@
             <Component class="javax.swing.JTextField" name="jTextField38">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2331,6 +2369,7 @@
             <Component class="javax.swing.JTextField" name="jTextField39">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2349,6 +2388,7 @@
             <Component class="javax.swing.JTextField" name="jTextField40">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2369,6 +2409,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="7"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2386,6 +2427,7 @@
             <Component class="javax.swing.JTextField" name="jTextField42">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2404,6 +2446,7 @@
             <Component class="javax.swing.JTextField" name="jTextField43">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2422,6 +2465,7 @@
             <Component class="javax.swing.JTextField" name="jTextField44">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2440,6 +2484,7 @@
             <Component class="javax.swing.JTextField" name="jTextField45">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2458,6 +2503,7 @@
             <Component class="javax.swing.JTextField" name="jTextField46">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2478,6 +2524,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="4"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2497,6 +2544,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="8"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2514,6 +2562,7 @@
             <Component class="javax.swing.JTextField" name="jTextField49">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2534,6 +2583,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="2"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2551,6 +2601,7 @@
             <Component class="javax.swing.JTextField" name="jTextField51">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2571,6 +2622,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2588,6 +2640,7 @@
             <Component class="javax.swing.JTextField" name="jTextField53">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2608,6 +2661,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="3"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2625,6 +2679,7 @@
             <Component class="javax.swing.JTextField" name="jTextField55">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2645,6 +2700,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="5"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2664,6 +2720,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="2"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2681,6 +2738,7 @@
             <Component class="javax.swing.JTextField" name="jTextField58">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2699,6 +2757,7 @@
             <Component class="javax.swing.JTextField" name="jTextField59">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2717,6 +2776,7 @@
             <Component class="javax.swing.JTextField" name="jTextField60">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2735,6 +2795,7 @@
             <Component class="javax.swing.JTextField" name="jTextField61">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2755,6 +2816,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="9"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2772,6 +2834,7 @@
             <Component class="javax.swing.JTextField" name="jTextField63">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2790,6 +2853,7 @@
             <Component class="javax.swing.JTextField" name="jTextField64">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2808,6 +2872,7 @@
             <Component class="javax.swing.JTextField" name="jTextField65">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2828,6 +2893,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2845,6 +2911,7 @@
             <Component class="javax.swing.JTextField" name="jTextField67">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2863,6 +2930,7 @@
             <Component class="javax.swing.JTextField" name="jTextField68">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2881,6 +2949,7 @@
             <Component class="javax.swing.JTextField" name="jTextField69">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2899,6 +2968,7 @@
             <Component class="javax.swing.JTextField" name="jTextField70">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2917,6 +2987,7 @@
             <Component class="javax.swing.JTextField" name="jTextField71">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2935,6 +3006,7 @@
             <Component class="javax.swing.JTextField" name="jTextField72">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2955,6 +3027,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="3"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2972,6 +3045,7 @@
             <Component class="javax.swing.JTextField" name="jTextField74">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -2990,6 +3064,7 @@
             <Component class="javax.swing.JTextField" name="jTextField75">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3010,6 +3085,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="9"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3027,6 +3103,7 @@
             <Component class="javax.swing.JTextField" name="jTextField77">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3047,6 +3124,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="2"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3064,6 +3142,7 @@
             <Component class="javax.swing.JTextField" name="jTextField79">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3082,6 +3161,7 @@
             <Component class="javax.swing.JTextField" name="jTextField80">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3102,6 +3182,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="5"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3118,6 +3199,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jHorizontalSeparator1">
               <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3125,6 +3207,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jHorizontalSeparator2">
               <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3132,6 +3215,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jHorizontalSeparator3">
               <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3139,6 +3223,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jHorizontalSeparator4">
               <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3146,6 +3231,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jHorizontalSeparator5">
               <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3153,6 +3239,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jHorizontalSeparator6">
               <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3161,6 +3248,7 @@
             <Component class="javax.swing.JSeparator" name="jVerticalSeparator1">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3169,6 +3257,7 @@
             <Component class="javax.swing.JSeparator" name="jVerticalSeparator2">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3177,6 +3266,7 @@
             <Component class="javax.swing.JSeparator" name="jVerticalSeparator3">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3185,6 +3275,7 @@
             <Component class="javax.swing.JSeparator" name="jVerticalSeparator4">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3193,6 +3284,7 @@
             <Component class="javax.swing.JSeparator" name="jVerticalSeparator5">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3201,6 +3293,7 @@
             <Component class="javax.swing.JSeparator" name="jVerticalSeparator6">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="toolTipText" type="java.lang.String" value="Enter number 1-9"/>
                 <Property name="inputVerifier" type="javax.swing.InputVerifier" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new ZeroToNineVerifier()" type="code"/>
                 </Property>
@@ -3209,6 +3302,7 @@
             <Component class="javax.swing.JButton" name="jButtonSubmit">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Submit"/>
+                <Property name="toolTipText" type="java.lang.String" value="Click to see if you are right."/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSubmitActionPerformed"/>
@@ -3217,6 +3311,7 @@
             <Component class="javax.swing.JButton" name="jQuitButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Quit"/>
+                <Property name="toolTipText" type="java.lang.String" value="Give up."/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jQuitButtonActionPerformed"/>
@@ -3228,6 +3323,7 @@
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new Date().toString().substring(0, 19)" type="code"/>
                 </Property>
+                <Property name="toolTipText" type="java.lang.String" value="This is a clock."/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Clock2ActionPerformed"/>

@@ -1063,6 +1063,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField1.setEditable(false);
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("8");
+        jTextField1.setToolTipText("Enter number 1-9");
         jTextField1.setInputVerifier(new ZeroToNineVerifier());
         jTextField1.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField1.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1073,6 +1074,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField2.setToolTipText("Enter number 1-9");
         jTextField2.setInputVerifier(new ZeroToNineVerifier());
         jTextField2.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField2.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1088,6 +1090,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField3.setToolTipText("Enter number 1-9");
         jTextField3.setInputVerifier(new ZeroToNineVerifier());
         jTextField3.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField3.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1105,6 +1108,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField4.setEditable(false);
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField4.setText("4");
+        jTextField4.setToolTipText("Enter number 1-9");
         jTextField4.setInputVerifier(new ZeroToNineVerifier());
         jTextField4.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField4.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1115,6 +1119,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField5.setToolTipText("Enter number 1-9");
         jTextField5.setInputVerifier(new ZeroToNineVerifier());
         jTextField5.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField5.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1132,6 +1137,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField6.setEditable(false);
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("6");
+        jTextField6.setToolTipText("Enter number 1-9");
         jTextField6.setInputVerifier(new ZeroToNineVerifier());
         jTextField6.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField6.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1142,6 +1148,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField7.setToolTipText("Enter number 1-9");
         jTextField7.setInputVerifier(new ZeroToNineVerifier());
         jTextField7.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField7.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1157,6 +1164,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField8.setToolTipText("Enter number 1-9");
         jTextField8.setInputVerifier(new ZeroToNineVerifier());
         jTextField8.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField8.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1174,6 +1182,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField9.setEditable(false);
         jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setText("7");
+        jTextField9.setToolTipText("Enter number 1-9");
         jTextField9.setInputVerifier(new ZeroToNineVerifier());
         jTextField9.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField9.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1184,6 +1193,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField10.setToolTipText("Enter number 1-9");
         jTextField10.setInputVerifier(new ZeroToNineVerifier());
         jTextField10.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField10.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1199,6 +1209,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField11.setToolTipText("Enter number 1-9");
         jTextField11.setInputVerifier(new ZeroToNineVerifier());
         jTextField11.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField11.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1214,6 +1225,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField12.setToolTipText("Enter number 1-9");
         jTextField12.setInputVerifier(new ZeroToNineVerifier());
         jTextField12.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField12.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1229,6 +1241,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField13.setToolTipText("Enter number 1-9");
         jTextField13.setInputVerifier(new ZeroToNineVerifier());
         jTextField13.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField13.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1244,6 +1257,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField14.setToolTipText("Enter number 1-9");
         jTextField14.setInputVerifier(new ZeroToNineVerifier());
         jTextField14.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField14.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1259,6 +1273,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField15.setToolTipText("Enter number 1-9");
         jTextField15.setInputVerifier(new ZeroToNineVerifier());
         jTextField15.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField15.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1276,6 +1291,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField16.setEditable(false);
         jTextField16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField16.setText("4");
+        jTextField16.setToolTipText("Enter number 1-9");
         jTextField16.setInputVerifier(new ZeroToNineVerifier());
         jTextField16.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField16.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1286,6 +1302,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField17.setToolTipText("Enter number 1-9");
         jTextField17.setInputVerifier(new ZeroToNineVerifier());
         jTextField17.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField17.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1301,6 +1318,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField18.setToolTipText("Enter number 1-9");
         jTextField18.setInputVerifier(new ZeroToNineVerifier());
         jTextField18.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField18.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1316,6 +1334,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField19.setToolTipText("Enter number 1-9");
         jTextField19.setInputVerifier(new ZeroToNineVerifier());
         jTextField19.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField19.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1333,6 +1352,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField20.setEditable(false);
         jTextField20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField20.setText("1");
+        jTextField20.setToolTipText("Enter number 1-9");
         jTextField20.setInputVerifier(new ZeroToNineVerifier());
         jTextField20.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField20.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1343,6 +1363,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField21.setToolTipText("Enter number 1-9");
         jTextField21.setInputVerifier(new ZeroToNineVerifier());
         jTextField21.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField21.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1358,6 +1379,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField22.setToolTipText("Enter number 1-9");
         jTextField22.setInputVerifier(new ZeroToNineVerifier());
         jTextField22.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField22.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1373,6 +1395,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField23.setToolTipText("Enter number 1-9");
         jTextField23.setInputVerifier(new ZeroToNineVerifier());
         jTextField23.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField23.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1388,6 +1411,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField24.setToolTipText("Enter number 1-9");
         jTextField24.setInputVerifier(new ZeroToNineVerifier());
         jTextField24.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField24.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1405,6 +1429,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField25.setEditable(false);
         jTextField25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField25.setText("6");
+        jTextField25.setToolTipText("Enter number 1-9");
         jTextField25.setInputVerifier(new ZeroToNineVerifier());
         jTextField25.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField25.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1417,6 +1442,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField26.setEditable(false);
         jTextField26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField26.setText("5");
+        jTextField26.setToolTipText("Enter number 1-9");
         jTextField26.setInputVerifier(new ZeroToNineVerifier());
         jTextField26.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField26.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1427,6 +1453,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField27.setToolTipText("Enter number 1-9");
         jTextField27.setInputVerifier(new ZeroToNineVerifier());
         jTextField27.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField27.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1444,6 +1471,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField28.setEditable(false);
         jTextField28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField28.setText("5");
+        jTextField28.setToolTipText("Enter number 1-9");
         jTextField28.setInputVerifier(new ZeroToNineVerifier());
         jTextField28.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField28.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1454,6 +1482,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField29.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField29.setToolTipText("Enter number 1-9");
         jTextField29.setInputVerifier(new ZeroToNineVerifier());
         jTextField29.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField29.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1471,6 +1500,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField30.setEditable(false);
         jTextField30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField30.setText("9");
+        jTextField30.setToolTipText("Enter number 1-9");
         jTextField30.setInputVerifier(new ZeroToNineVerifier());
         jTextField30.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField30.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1481,6 +1511,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField31.setToolTipText("Enter number 1-9");
         jTextField31.setInputVerifier(new ZeroToNineVerifier());
         jTextField31.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField31.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1498,6 +1529,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField32.setEditable(false);
         jTextField32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField32.setText("3");
+        jTextField32.setToolTipText("Enter number 1-9");
         jTextField32.setInputVerifier(new ZeroToNineVerifier());
         jTextField32.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField32.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1508,6 +1540,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField33.setToolTipText("Enter number 1-9");
         jTextField33.setInputVerifier(new ZeroToNineVerifier());
         jTextField33.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField33.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1525,6 +1558,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField34.setEditable(false);
         jTextField34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField34.setText("7");
+        jTextField34.setToolTipText("Enter number 1-9");
         jTextField34.setInputVerifier(new ZeroToNineVerifier());
         jTextField34.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField34.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1537,6 +1571,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField35.setEditable(false);
         jTextField35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField35.setText("8");
+        jTextField35.setToolTipText("Enter number 1-9");
         jTextField35.setInputVerifier(new ZeroToNineVerifier());
         jTextField35.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField35.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1547,6 +1582,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField36.setToolTipText("Enter number 1-9");
         jTextField36.setInputVerifier(new ZeroToNineVerifier());
         jTextField36.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField36.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1562,6 +1598,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField37.setToolTipText("Enter number 1-9");
         jTextField37.setInputVerifier(new ZeroToNineVerifier());
         jTextField37.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField37.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1577,6 +1614,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField38.setToolTipText("Enter number 1-9");
         jTextField38.setInputVerifier(new ZeroToNineVerifier());
         jTextField38.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField38.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1592,6 +1630,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField39.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField39.setToolTipText("Enter number 1-9");
         jTextField39.setInputVerifier(new ZeroToNineVerifier());
         jTextField39.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField39.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1607,6 +1646,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField40.setToolTipText("Enter number 1-9");
         jTextField40.setInputVerifier(new ZeroToNineVerifier());
         jTextField40.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField40.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1624,6 +1664,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField41.setEditable(false);
         jTextField41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField41.setText("7");
+        jTextField41.setToolTipText("Enter number 1-9");
         jTextField41.setInputVerifier(new ZeroToNineVerifier());
         jTextField41.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField41.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1634,6 +1675,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField42.setToolTipText("Enter number 1-9");
         jTextField42.setInputVerifier(new ZeroToNineVerifier());
         jTextField42.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField42.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1649,6 +1691,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField43.setToolTipText("Enter number 1-9");
         jTextField43.setInputVerifier(new ZeroToNineVerifier());
         jTextField43.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField43.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1664,6 +1707,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField44.setToolTipText("Enter number 1-9");
         jTextField44.setInputVerifier(new ZeroToNineVerifier());
         jTextField44.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField44.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1679,6 +1723,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField45.setToolTipText("Enter number 1-9");
         jTextField45.setInputVerifier(new ZeroToNineVerifier());
         jTextField45.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField45.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1694,6 +1739,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField46.setToolTipText("Enter number 1-9");
         jTextField46.setInputVerifier(new ZeroToNineVerifier());
         jTextField46.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField46.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1711,6 +1757,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField47.setEditable(false);
         jTextField47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField47.setText("4");
+        jTextField47.setToolTipText("Enter number 1-9");
         jTextField47.setInputVerifier(new ZeroToNineVerifier());
         jTextField47.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField47.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1723,6 +1770,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField48.setEditable(false);
         jTextField48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField48.setText("8");
+        jTextField48.setToolTipText("Enter number 1-9");
         jTextField48.setInputVerifier(new ZeroToNineVerifier());
         jTextField48.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField48.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1733,6 +1781,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField49.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField49.setToolTipText("Enter number 1-9");
         jTextField49.setInputVerifier(new ZeroToNineVerifier());
         jTextField49.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField49.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1750,6 +1799,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField50.setEditable(false);
         jTextField50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField50.setText("2");
+        jTextField50.setToolTipText("Enter number 1-9");
         jTextField50.setInputVerifier(new ZeroToNineVerifier());
         jTextField50.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField50.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1760,6 +1810,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField51.setToolTipText("Enter number 1-9");
         jTextField51.setInputVerifier(new ZeroToNineVerifier());
         jTextField51.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField51.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1777,6 +1828,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField52.setEditable(false);
         jTextField52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField52.setText("1");
+        jTextField52.setToolTipText("Enter number 1-9");
         jTextField52.setInputVerifier(new ZeroToNineVerifier());
         jTextField52.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField52.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1787,6 +1839,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField53.setToolTipText("Enter number 1-9");
         jTextField53.setInputVerifier(new ZeroToNineVerifier());
         jTextField53.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField53.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1804,6 +1857,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField54.setEditable(false);
         jTextField54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField54.setText("3");
+        jTextField54.setToolTipText("Enter number 1-9");
         jTextField54.setInputVerifier(new ZeroToNineVerifier());
         jTextField54.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField54.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1814,6 +1868,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField55.setToolTipText("Enter number 1-9");
         jTextField55.setInputVerifier(new ZeroToNineVerifier());
         jTextField55.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField55.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1831,6 +1886,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField56.setEditable(false);
         jTextField56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField56.setText("5");
+        jTextField56.setToolTipText("Enter number 1-9");
         jTextField56.setInputVerifier(new ZeroToNineVerifier());
         jTextField56.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField56.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1843,6 +1899,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField57.setEditable(false);
         jTextField57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField57.setText("2");
+        jTextField57.setToolTipText("Enter number 1-9");
         jTextField57.setInputVerifier(new ZeroToNineVerifier());
         jTextField57.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField57.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1853,6 +1910,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField58.setToolTipText("Enter number 1-9");
         jTextField58.setInputVerifier(new ZeroToNineVerifier());
         jTextField58.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField58.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1868,6 +1926,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField59.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField59.setToolTipText("Enter number 1-9");
         jTextField59.setInputVerifier(new ZeroToNineVerifier());
         jTextField59.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField59.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1883,6 +1942,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField60.setToolTipText("Enter number 1-9");
         jTextField60.setInputVerifier(new ZeroToNineVerifier());
         jTextField60.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField60.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1898,6 +1958,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField61.setToolTipText("Enter number 1-9");
         jTextField61.setInputVerifier(new ZeroToNineVerifier());
         jTextField61.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField61.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1915,6 +1976,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField62.setEditable(false);
         jTextField62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField62.setText("9");
+        jTextField62.setToolTipText("Enter number 1-9");
         jTextField62.setInputVerifier(new ZeroToNineVerifier());
         jTextField62.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField62.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1925,6 +1987,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField63.setToolTipText("Enter number 1-9");
         jTextField63.setInputVerifier(new ZeroToNineVerifier());
         jTextField63.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField63.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1940,6 +2003,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField64.setToolTipText("Enter number 1-9");
         jTextField64.setInputVerifier(new ZeroToNineVerifier());
         jTextField64.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField64.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1955,6 +2019,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField65.setToolTipText("Enter number 1-9");
         jTextField65.setInputVerifier(new ZeroToNineVerifier());
         jTextField65.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField65.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1972,6 +2037,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField66.setEditable(false);
         jTextField66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField66.setText("1");
+        jTextField66.setToolTipText("Enter number 1-9");
         jTextField66.setInputVerifier(new ZeroToNineVerifier());
         jTextField66.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField66.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1982,6 +2048,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField67.setToolTipText("Enter number 1-9");
         jTextField67.setInputVerifier(new ZeroToNineVerifier());
         jTextField67.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField67.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -1997,6 +2064,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField68.setToolTipText("Enter number 1-9");
         jTextField68.setInputVerifier(new ZeroToNineVerifier());
         jTextField68.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField68.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2012,6 +2080,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField69.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField69.setToolTipText("Enter number 1-9");
         jTextField69.setInputVerifier(new ZeroToNineVerifier());
         jTextField69.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField69.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2027,6 +2096,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField70.setToolTipText("Enter number 1-9");
         jTextField70.setInputVerifier(new ZeroToNineVerifier());
         jTextField70.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField70.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2042,6 +2112,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField71.setToolTipText("Enter number 1-9");
         jTextField71.setInputVerifier(new ZeroToNineVerifier());
         jTextField71.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField71.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2057,6 +2128,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField72.setToolTipText("Enter number 1-9");
         jTextField72.setInputVerifier(new ZeroToNineVerifier());
         jTextField72.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField72.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2074,6 +2146,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField73.setEditable(false);
         jTextField73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField73.setText("3");
+        jTextField73.setToolTipText("Enter number 1-9");
         jTextField73.setInputVerifier(new ZeroToNineVerifier());
         jTextField73.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField73.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2084,6 +2157,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField74.setToolTipText("Enter number 1-9");
         jTextField74.setInputVerifier(new ZeroToNineVerifier());
         jTextField74.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField74.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2099,6 +2173,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField75.setToolTipText("Enter number 1-9");
         jTextField75.setInputVerifier(new ZeroToNineVerifier());
         jTextField75.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField75.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2116,6 +2191,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField76.setEditable(false);
         jTextField76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField76.setText("9");
+        jTextField76.setToolTipText("Enter number 1-9");
         jTextField76.setInputVerifier(new ZeroToNineVerifier());
         jTextField76.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField76.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2126,6 +2202,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField77.setToolTipText("Enter number 1-9");
         jTextField77.setInputVerifier(new ZeroToNineVerifier());
         jTextField77.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField77.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2143,6 +2220,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField78.setEditable(false);
         jTextField78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField78.setText("2");
+        jTextField78.setToolTipText("Enter number 1-9");
         jTextField78.setInputVerifier(new ZeroToNineVerifier());
         jTextField78.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField78.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2153,6 +2231,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField79.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField79.setToolTipText("Enter number 1-9");
         jTextField79.setInputVerifier(new ZeroToNineVerifier());
         jTextField79.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField79.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2168,6 +2247,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jTextField80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField80.setToolTipText("Enter number 1-9");
         jTextField80.setInputVerifier(new ZeroToNineVerifier());
         jTextField80.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField80.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2185,6 +2265,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         jTextField81.setEditable(false);
         jTextField81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField81.setText("5");
+        jTextField81.setToolTipText("Enter number 1-9");
         jTextField81.setInputVerifier(new ZeroToNineVerifier());
         jTextField81.setMinimumSize(new java.awt.Dimension(25, 25));
         jTextField81.setPreferredSize(new java.awt.Dimension(25, 25));
@@ -2194,37 +2275,50 @@ public class HangmanGUI extends javax.swing.JFrame {
             }
         });
 
+        jHorizontalSeparator1.setToolTipText("Enter number 1-9");
         jHorizontalSeparator1.setInputVerifier(new ZeroToNineVerifier());
 
+        jHorizontalSeparator2.setToolTipText("Enter number 1-9");
         jHorizontalSeparator2.setInputVerifier(new ZeroToNineVerifier());
 
+        jHorizontalSeparator3.setToolTipText("Enter number 1-9");
         jHorizontalSeparator3.setInputVerifier(new ZeroToNineVerifier());
 
+        jHorizontalSeparator4.setToolTipText("Enter number 1-9");
         jHorizontalSeparator4.setInputVerifier(new ZeroToNineVerifier());
 
+        jHorizontalSeparator5.setToolTipText("Enter number 1-9");
         jHorizontalSeparator5.setInputVerifier(new ZeroToNineVerifier());
 
+        jHorizontalSeparator6.setToolTipText("Enter number 1-9");
         jHorizontalSeparator6.setInputVerifier(new ZeroToNineVerifier());
 
         jVerticalSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jVerticalSeparator1.setToolTipText("Enter number 1-9");
         jVerticalSeparator1.setInputVerifier(new ZeroToNineVerifier());
 
         jVerticalSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jVerticalSeparator2.setToolTipText("Enter number 1-9");
         jVerticalSeparator2.setInputVerifier(new ZeroToNineVerifier());
 
         jVerticalSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jVerticalSeparator3.setToolTipText("Enter number 1-9");
         jVerticalSeparator3.setInputVerifier(new ZeroToNineVerifier());
 
         jVerticalSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jVerticalSeparator4.setToolTipText("Enter number 1-9");
         jVerticalSeparator4.setInputVerifier(new ZeroToNineVerifier());
 
         jVerticalSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jVerticalSeparator5.setToolTipText("Enter number 1-9");
         jVerticalSeparator5.setInputVerifier(new ZeroToNineVerifier());
 
         jVerticalSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jVerticalSeparator6.setToolTipText("Enter number 1-9");
         jVerticalSeparator6.setInputVerifier(new ZeroToNineVerifier());
 
         jButtonSubmit.setText("Submit");
+        jButtonSubmit.setToolTipText("Click to see if you are right.");
         jButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubmitActionPerformed(evt);
@@ -2232,6 +2326,7 @@ public class HangmanGUI extends javax.swing.JFrame {
         });
 
         jQuitButton.setText("Quit");
+        jQuitButton.setToolTipText("Give up.");
         jQuitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jQuitButtonActionPerformed(evt);
@@ -2240,6 +2335,7 @@ public class HangmanGUI extends javax.swing.JFrame {
 
         Clock2.setEditable(false);
         Clock2.setText(new Date().toString().substring(0, 19));
+        Clock2.setToolTipText("This is a clock.");
         Clock2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Clock2ActionPerformed(evt);
