@@ -168,11 +168,6 @@ public class HangmanGUI extends javax.swing.JFrame {
         jLabelCreditsTitle = new javax.swing.JLabel();
         jButtonCreditsBack = new javax.swing.JButton();
         jLabelDavid = new javax.swing.JLabel();
-        jPanelEnd = new javax.swing.JPanel();
-        jLabelEndTitle = new javax.swing.JLabel();
-        jLabelEndScore = new javax.swing.JLabel();
-        jButtonEnd = new javax.swing.JButton();
-        jLabelEndStatus = new javax.swing.JLabel();
         jPanelStartScreen = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -806,60 +801,6 @@ public class HangmanGUI extends javax.swing.JFrame {
         );
 
         jPanelCards.add(jPanelCredits, "card6");
-
-        jPanelEnd.setPreferredSize(new java.awt.Dimension(600, 380));
-
-        jLabelEndTitle.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabelEndTitle.setText("End");
-
-        jLabelEndScore.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelEndScore.setText("Score: 100");
-
-        jButtonEnd.setText("End");
-        jButtonEnd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEndActionPerformed(evt);
-            }
-        });
-
-        jLabelEndStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelEndStatus.setText("You win");
-
-        javax.swing.GroupLayout jPanelEndLayout = new javax.swing.GroupLayout(jPanelEnd);
-        jPanelEnd.setLayout(jPanelEndLayout);
-        jPanelEndLayout.setHorizontalGroup(
-            jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelEndLayout.createSequentialGroup()
-                .addGroup(jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelEndLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButtonEnd)
-                        .addGap(204, 204, 204)
-                        .addComponent(jLabelEndTitle))
-                    .addGroup(jPanelEndLayout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addGroup(jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelEndLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabelEndStatus))
-                            .addComponent(jLabelEndScore))))
-                .addContainerGap(335, Short.MAX_VALUE))
-        );
-        jPanelEndLayout.setVerticalGroup(
-            jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelEndLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelEndLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelEndTitle)
-                    .addComponent(jButtonEnd))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelEndScore)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelEndStatus)
-                .addContainerGap(314, Short.MAX_VALUE))
-        );
-
-        jPanelCards.add(jPanelEnd, "card7");
 
         jPanelStartScreen.setPreferredSize(new java.awt.Dimension(600, 380));
 
@@ -3133,30 +3074,6 @@ public class HangmanGUI extends javax.swing.JFrame {
         card.show(jPanelCards, "card2");
     }//GEN-LAST:event_jButtonHighScoresBackActionPerformed
 
-    private void jButtonEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEndActionPerformed
-        CardLayout card = (CardLayout)jPanelCards.getLayout();
-        tries = 5;
-        Timer time = new Timer(500, new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    updateClock1();
-                }
-            });
-        time.start();
-        colorPool.add(Color.YELLOW);
-        colorPool.add(Color.RED);
-        colorPool.add(Color.GREEN);
-        colorPool.add(Color.BLUE);
-        colorPool.add(Color.MAGENTA);
-        resetButtonColors();
-        jButtonColor1.setEnabled(true);
-        jButtonColor2.setEnabled(true);
-        jButtonColor3.setEnabled(true);
-        jButtonColor4.setEnabled(true);
-        jButtonColor5.setEnabled(true);
-        card.show(jPanelCards, "card8");
-    }//GEN-LAST:event_jButtonEndActionPerformed
-
     private void Clock1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Clock1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Clock1ActionPerformed
@@ -4090,7 +4007,6 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCreditsBack;
     private javax.swing.JButton jButtonD;
     private javax.swing.JButton jButtonE;
-    private javax.swing.JButton jButtonEnd;
     private javax.swing.JButton jButtonF;
     private javax.swing.JButton jButtonG;
     private javax.swing.JButton jButtonH;
@@ -4130,9 +4046,6 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCreditsTitle;
     private javax.swing.JLabel jLabelDavid;
     private javax.swing.JLabel jLabelDisplayWord;
-    private javax.swing.JLabel jLabelEndScore;
-    private javax.swing.JLabel jLabelEndStatus;
-    private javax.swing.JLabel jLabelEndTitle;
     private javax.swing.JLabel jLabelHighScores1;
     private javax.swing.JLabel jLabelHighScores2;
     private javax.swing.JLabel jLabelHighScores3;
@@ -4147,7 +4060,6 @@ public class HangmanGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelColorGame;
     private javax.swing.JPanel jPanelColorGameEnd;
     private javax.swing.JPanel jPanelCredits;
-    private javax.swing.JPanel jPanelEnd;
     private javax.swing.JPanel jPanelHangman;
     private javax.swing.JPanel jPanelHighScores;
     private javax.swing.JPanel jPanelMainMenu;
